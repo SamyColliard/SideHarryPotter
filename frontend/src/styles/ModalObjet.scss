@@ -1,0 +1,147 @@
+.backgroundModalObjet {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 4s;
+  z-index: 1;
+  width: 90vw;
+  height: 100vh;
+  background-color: transparent;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+  .modalObjet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    width: 400px;
+    height: 600px;
+    background-image: url("../assets/parchemin.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .modalObjetHeader {
+      display: flex;
+      justify-content: space-between;
+      width: 380px;
+      margin-bottom: 10px;
+
+      .objetImage {
+        width: 80px;
+        height: 80px;
+        margin-right: -50px;
+        margin-top: 20px;
+        margin-left: 20px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .objetTitre {
+        margin-top: 50px;
+      }
+
+      .closeModalObjet {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-top: 50px;
+        cursor: pointer;
+      }
+      .closeModalObjet:hover {
+        transform: scale(1.1);
+      }
+      .closeModalObjet:hover {
+        animation: shake 0.2s ease-in-out 3 normal;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-2px);
+          rotate: -10deg;
+        }
+        50% {
+          transform: translateX(2px);
+          rotate: 10deg;
+        }
+        75% {
+          transform: translateX(-2px);
+          rotate: -10deg;
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    .modalObjetBody {
+      height: 350px;
+      width: 350px;
+      overflow: auto;
+
+      .objetDescription {
+        margin: 0;
+        padding: 10px;
+        text-align: justify;
+        line-height: 1.5;
+      }
+    }
+
+    .modalObjetFooter {
+      display: flex;
+      width: 100px;
+      margin-bottom: 50px;
+
+      .tamponImage {
+        width: 100px;
+        margin-left: -70px;
+      }
+
+      .signatureImage {
+        width: 180px;
+        margin-right: -70px;
+      }
+    }
+  }
+  .imageOverlay {
+    margin-top: 50px;
+    justify-content: center;
+    background: linear-gradient(#16161d, #1f1f3a, #3b2f4a);
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 300px;
+    border-style: solid;
+    border-radius: 20px;
+  }
+  .messageOverlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 5;
+
+    .messageText {
+      margin: 0;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

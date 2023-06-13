@@ -1,0 +1,140 @@
+.containerLivres {
+  .livre1 {
+    background-image: url("../assets/Livre1.jpg");
+    width: 333px;
+    height: 500px;
+    margin: 100px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .blur {
+      width: 333px;
+      height: 500px;
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.512);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      .allElement {
+        z-index: 1;
+        font-family: "Lumos", sans-serif;
+        font-size: 15px;
+        display: flex;
+        width: 180px;
+        height: 35px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 5px;
+        border-radius: 20px;
+        border: 2px solid black;
+        background-color: #c9af28;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #d8bd51;
+        }
+      }
+      .dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        .dropdown-item1 {
+          z-index: -1;
+          position: absolute;
+          font-family: "Lumos", sans-serif;
+          font-size: 15px;
+          display: flex;
+          width: 150px;
+          height: 35px;
+          align-items: center;
+
+          justify-content: space-evenly;
+          padding-bottom: 5px;
+          border-radius: 20px;
+          border: 2px solid black;
+          background-color: #c9ae28ac;
+          transition: background-color 0.3s ease;
+          margin-top: 70px;
+          transform: translateY(-100%);
+          transition: transform 0.5s ease;
+          .imagePlay {
+            width: 15px;
+          }
+          &:hover {
+            background-color: #d8bd51;
+          }
+        }
+
+        .dropdown-item2 {
+          position: absolute;
+          font-family: "Lumos", sans-serif;
+          font-size: 15px;
+          display: flex;
+          width: 150px;
+          height: 35px;
+          align-items: center;
+
+          justify-content: space-evenly;
+          padding-bottom: 5px;
+          border-radius: 20px;
+          border: 2px solid black;
+          background-color: #c9ae28ac;
+
+          transition: background-color 0.3s ease;
+          margin-top: 140px;
+          transform: translateY(-200%);
+          transition: transform 0.5s ease;
+          &:hover {
+            background-color: #d8bd51;
+          }
+          .imageRestart {
+            width: 15px;
+          }
+        }
+      }
+      .dropdown-open {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transform: translateY(0);
+        .dropdown-item1 {
+          transform: translateY(0);
+        }
+        .dropdown-item2 {
+          transform: translateY(0);
+        }
+      }
+
+      .modal {
+        opacity: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-20px);
+        transition: opacity 01s ease, transform 1.5s ease;
+        z-index: 2;
+      }
+
+      .modal-open {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

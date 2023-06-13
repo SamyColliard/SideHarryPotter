@@ -1,0 +1,114 @@
+.pageHome {
+  .backgroundHome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -4;
+    width: 100vw;
+    height: 100vh;
+  }
+  .headerHome {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .contentHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -2;
+    .buttonHomeOff {
+      display: none;
+      .imageButton {
+        display: none;
+      }
+    }
+    .buttonHome {
+      padding-top: 120px;
+      margin-bottom: -191px;
+      display: flex;
+      background-color: transparent;
+      border: none;
+      .imageButton {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .imageButton:hover {
+        transform: scale(1.2);
+      }
+    }
+    .divModalObjet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .message {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      width: 700px;
+      height: 200px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 35px black;
+      background-color: rgba(0, 0, 0, 0.725);
+    }
+
+    .imageContainer--enabled {
+      z-index: -1;
+    }
+
+    .imageContainer {
+      position: relative;
+
+      .banniere {
+        display: flex;
+        margin-top: 230px;
+        width: 1470px;
+        border-radius: 20px;
+        margin-bottom: 100px;
+        filter: drop-shadow(0px 0px 80px rgba(255, 255, 255, 0.294));
+        box-shadow: 0px 0px 35px black;
+        transition: filter 0.3s ease-in-out;
+      }
+    }
+
+    .banniere:hover {
+      filter: blur(10px);
+    }
+
+    .resume {
+      width: 1400px;
+      padding: 20px;
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0px 0px 35px black;
+      font-size: 28px;
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      background-color: rgba(0, 0, 0, 0.725);
+    }
+
+    .banniere:hover + .resume {
+      opacity: 1;
+      pointer-events: none;
+    }
+    .livres--enabled {
+      z-index: -1;
+    }
+  }
+}

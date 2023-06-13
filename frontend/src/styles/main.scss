@@ -1,0 +1,22 @@
+@import "./App.scss";
+@import "./Home.scss";
+@import "./TwinklingStars.scss";
+@import "./Titre.scss";
+@import "./Livres.scss";
+@import "./ResumeLivre.scss";
+@import "./Chapter.scss";
+@import "./Connect.scss";
+@import "./HomeAnimation.scss";
+@import "./ModalObjet.scss";
+
+@font-face {
+  font-family: "Lumos";
+  src: url("../assets/font/Hogwarts.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Lumos", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

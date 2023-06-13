@@ -1,0 +1,28 @@
+.connectAll {
+  flex-direction: column;
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  width: 160px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  .connectForm {
+    display: flex;
+    align-items: center;
+
+    .plume {
+      height: 55px;
+    }
+    .connect {
+      color: white;
+      font-size: 15px;
+      font-family: "Lumos", sans-serif;
+      margin-left: 10px;
+    }
+  }
+}
